@@ -1,0 +1,49 @@
+﻿<div class="m-stack__item m-stack__item--middle m-stack__item--fluid">
+    <button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-light " id="m_aside_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+    <div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light ">
+        <ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
+            <li class="@(Html.IsActive("Home") ? "m-menu__item m-menu__item--active" : "m-menu__item")" aria-haspopup="true">
+                <a href="@Url.Action("Index", "Home")" class="m-menu__link ">
+                    <i class="m-menu__link-icon la la-user"></i><span class="m-menu__item-here"></span>
+                    <span class="m-menu__link-text"><b>Trang chủ</b></span>
+                </a>
+            </li>
+            <li class="@(Html.IsActive("Manage") ? "m-menu__item m-menu__item--active" : "m-menu__item")" aria-haspopup="true">
+                <a href="@Url.Action("Index", "Manage")" class="m-menu__link ">
+                    <i class="m-menu__link-icon la la-user"></i><span class="m-menu__item-here"></span>
+                    <span class="m-menu__link-text"><b>Tài khoản</b></span>
+                </a>
+            </li>
+            <li class="@(Html.IsActive("Cash", "Index") ? "m-menu__item m-menu__item--active" : "m-menu__item")" aria-haspopup="true">
+                <a href="@Url.Action("Index", "Cash")" class="m-menu__link ">
+                    <i class="m-menu__link-icon la la-dashboard"></i><span class="m-menu__item-here"></span>
+                    <span class="m-menu__link-text"><b>Tổng hợp</b></span>
+                </a>
+            </li>
+            <li class="@(Html.IsActive("Cash", "Charge") ? "m-menu__item m-menu__item--active" : "m-menu__item")" aria-haspopup="true">
+                <a href="@Url.Action("Charge", "Cash")" class="m-menu__link ">
+                    <i class="m-menu__link-icon la la-credit-card"></i><span class="m-menu__item-here"></span>
+                    <span class="m-menu__link-text"><b>Nạp tiền</b></span>
+                </a>
+            </li>
+            <li class="@(Html.IsActive("Cash", "Withdraw") ? "m-menu__item m-menu__item--active" : "m-menu__item")" aria-haspopup="true">
+                <a href="@Url.Action("Withdraw", "Cash")" class="m-menu__link ">
+                    <i class="m-menu__link-icon la la-bank"></i><span class="m-menu__item-here"></span>
+                    <span class="m-menu__link-text"><b>Rút tiền</b></span>
+                </a>
+            </li>
+            <li class="@(Html.IsActive("Cash", "Exchange") ? "m-menu__item m-menu__item--active" : "m-menu__item")" aria-haspopup="true">
+                <a href="@Url.Action("Exchange", "Cash")" class="m-menu__link ">
+                    <i class="m-menu__link-icon la la-cubes"></i><span class="m-menu__item-here"></span>
+                    <span class="m-menu__link-text"><b>Mua thẻ</b></span>
+                </a>
+            </li>
+            <li class="@(Html.IsActive("Cash", "Tranfer") ? "m-menu__item m-menu__item--active" : "m-menu__item")" aria-haspopup="true">
+                <a href="@Url.Action("Tranfer", "Cash")" class="m-menu__link ">
+                    <i class="m-menu__link-icon la la-send"></i><span class="m-menu__item-here"></span>
+                    <span class="m-menu__link-text"><b>Chuyển khoản</b></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

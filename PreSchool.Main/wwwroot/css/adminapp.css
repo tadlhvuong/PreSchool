@@ -1,0 +1,51 @@
+﻿.clickable-item {
+    cursor: pointer;
+}
+
+.img-avatar {
+    max-width: 128px;
+    max-height: 128px;
+}
+
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.telco {
+    background: url(../img/telco.png) no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 18px;
+    vertical-align: middle;
+    width: 67px
+}
+
+.telco-vnp {
+    background-position: 0 -18px
+}
+
+.telco-vtt {
+    background-position: 0 -36px
+}
+
+.telco-gte {
+    background-position: 0 -54px
+}
+
+.telco-vcn {
+    background-position: 0 -72px
+}
+
+.telco-bit {
+    background-position: 0 -90px
+}
+
+.telco-vnm {
+    background-position: 0 -108px
+}
+
+.telco-bank {
+    background-position: 0 -126px
+}
