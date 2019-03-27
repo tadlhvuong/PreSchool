@@ -130,6 +130,19 @@
             };
         };
 
+        $.fn.dataTable.render.statusb = function () {
+            return function (s) {
+                var e = {
+                    '-1': { title: 'Tin đã khóa', class: 'm-badge--danger' },
+                    0: { title: 'Chờ đăng tin', class: 'm-badge--warning' },
+                    1: { title: 'Tin thường', class: 'm-badge--default' },
+                    2: { title: 'Đặc biệt', class: 'm-badge--success' }
+            };
+
+                return '<span class="m-badge m-badge--wide ' + e[s].class + '">' + e[s].title + '</span>';
+            };
+        };
+
         $.fn.dataTable.render.statusc = function () {
             return function (s) {
                 var e = {
@@ -162,10 +175,25 @@
             return function (s) {
                 var e = {
                     0: { title: "Đang chờ", class: "m-badge--brand" },
-                    1: { title: "Đang xử lý", class: " m-badge--info" },
-                    2: { title: "Thất bại", class: " m-badge--warning" },
-                    3: { title: "Thành công", class: " m-badge--success" },
+                    1: { title: "Đang xử lý", class: "m-badge--info" },
+                    2: { title: "Thất bại", class: "m-badge--warning" },
+                    3: { title: "Thành công", class: "m-badge--success" },
                     '-1': { title: 'Nghiêm trọng', class: ' m-badge--danger' }
+                };
+
+                return '<span class="m-badge m-badge--wide ' + e[s].class + '">' + e[s].title + '</span>';
+            };
+        };
+
+        $.fn.dataTable.render.statusm = function () {
+            return function (s) {
+                var e = {
+                    0: { title: "Đổi thẻ", class: "m-badge--brand" },
+                    1: { title: "Rút tiền", class: "m-badge--info" },
+                    2: { title: "Mua thẻ", class: "m-badge--success" },
+                    3: { title: "Chuyển khoản", class: "m-badge--metal" },
+                    4: { title: "Hoàn rút", class: "m-badge--warning" },
+                    5: { title: "Hoàn mua", class: "m-badge--warning" }
                 };
 
                 return '<span class="m-badge m-badge--wide ' + e[s].class + '">' + e[s].title + '</span>';

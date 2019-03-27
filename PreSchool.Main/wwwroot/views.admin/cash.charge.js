@@ -8,9 +8,11 @@
         pagingType: "full_numbers",
         language: {
             loadingRecords: '&nbsp;',
+            info: "Tổng số: _TOTAL_; Hiển thị từ _START_ tới _END_",
+            lengthMenu: "Mỗi trang _MENU_ dòng",
             processing: '<div class="m-loader m-loader--brand m-loader--right m-loader--lg">Loading... </div>'
         },
-        dom: "<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
+        dom: "<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-4'i><'col-sm-12 col-md-8 dataTables_pager'lp>>",
         listAction: {
             disableResponseHtmlEncoding: true,
             ajaxFunction: function (inputFilter) {
@@ -52,7 +54,7 @@
             },
             {
                 targets: 5,
-                data: "originAmount",
+                data: "cardAmount",
                 render: $.fn.dataTable.render.number(',', '.', 0, '')
             },
             {

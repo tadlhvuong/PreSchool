@@ -2,13 +2,6 @@
     padding-left: 2.15rem;
 }
 
-.btn-xs {
-    padding: 1px 5px;
-    font-size: 12px;
-    line-height: 1.5;
-    border-radius: 3px;
-}
-
 .m-form .m-form__group img {
     margin-top: 2px;
     height: calc(2.95rem - 2px);
@@ -18,4 +11,380 @@
     margin-top: 1.3rem;
     height: calc(2.95rem - 2px);
     border-radius: 40px;
+}
+
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.telco {
+    background: url(../img/telco.png) no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 18px;
+    vertical-align: middle;
+    width: 67px
+}
+
+.telco-VMS {
+    background: url(../img/card/the-mobifone.jpeg) no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 86px;
+}
+
+.telco-VNP {
+    background: url(../img/card/the-vinaphone.jpeg) no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 86px;
+}
+
+.telco-VTT {
+    background: url(../img/card/the-viettel.png) no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 86px;
+}
+
+.telco-GTE {
+    background: url(../img/card/the-gate.jpg) no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 86px;
+}
+
+.telco-VCN {
+    background: url(../img/card/the-vcoin.jpg) no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 86px;
+}
+
+.telco-BIT {
+}
+
+.telco-VNM {
+    background: url(../img/card/the-vietnamobile.jpg) no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 86px;
+}
+
+.telco-BANK {
+    background: url(../img/card/bank.jpg) no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 86px;
+    margin: 0 30%;
+}
+
+.telco-ANP {
+    background: url('../img/card/the-anpay.jpg') no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 86px;
+}
+
+.telco-GNA {
+    background: url('../img/card/the-garena.jpg') no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 86px;
+}
+
+.telco-vms {
+    background-position: 0 0
+}
+
+.telco-vnp {
+    background-position: 0 -18px
+}
+
+.telco-vtt {
+    background-position: 0 -36px
+}
+
+.telco-gte {
+    background-position: 0 -54px
+}
+
+.telco-vcn {
+    background-position: 0 -72px
+}
+
+.telco-bit {
+    background-position: 0 -90px
+}
+
+.telco-vnm {
+    background-position: 0 -108px
+}
+
+.telco-bank {
+    background-position: 0 -126px
+}
+
+.telco-anp {
+    background-position: 0 -144px
+}
+
+.m-header-menu .m-menu__nav > .m-menu__item--active {
+    padding: 1% 0 1% 0 !important;
+    width: auto;
+}
+
+    .m-header-menu .m-menu__nav > .m-menu__item--active > .m-menu__link {
+        background: linear-gradient(135deg, #716aca 30%, #36a3f7 100%) !important;
+        border-color: #808080 !important;
+        border-radius: 10px !important;
+        padding: 10px !important;
+        color: white;
+    }
+
+.m-header-menu.m-header-menu--skin-light .m-menu__nav > .m-menu__item.m-menu__item--active > .m-menu__link .m-menu__link-icon {
+    color: white !important;
+    font-size: 2.0vh !important;
+}
+
+.m-header-menu.m-header-menu--skin-light .m-menu__nav > .m-menu__item > .m-menu__link .m-menu__link-icon {
+    font-size: 2.0vh !important;
+}
+
+.m-header-menu.m-header-menu--skin-light .m-menu__nav > .m-menu__item.m-menu__item--active > .m-menu__link .m-menu__link-text {
+    color: white !important;
+    font-size: 1.5vh !important;
+}
+
+.m-header-menu.m-header-menu--skin-light .m-menu__nav > .m-menu__item--active > .m-menu__link .m-menu__link-text {
+    color: white !important;
+    font-size: 1.5vh !important;
+}
+
+.nav.nav-pills.nav-pills--warning .nav-link.active {
+    padding: 0 !important;
+    background: transparent !important;
+    border: 2px solid #35925c !important;
+}
+
+
+.call-now-button {
+    display: none;
+    z-index: 9999;
+    clear: both;
+    margin: 0 auto;
+    position: fixed;
+    border-radius: 50px;
+}
+
+.call-now-button {
+    background: #eded00;
+}
+
+.call-now-button {
+    right: 15%;
+}
+
+.call-now-button {
+    top: 80%;
+}
+
+@media screen and (max-width: 1860px) {
+    .call-now-button {
+        display: flex !important;
+        background: #eded00;
+    }
+}
+
+.call-now-button div {
+    display: flex;
+}
+
+    .call-now-button div p {
+        color: #fff;
+        display: table;
+        padding: 10px;
+        border-radius: 21px;
+        height: 34px;
+        line-height: 14px;
+        font-size: 14px;
+        margin: 8px 5px 8px 50px;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+        box-sizing: content-box;
+        text-decoration: none !important;
+        box-sizing: border-box;
+    }
+
+.call-now-button .call-text {
+    color: #d33;
+}
+
+
+.call-now-button div {
+    display: flex;
+}
+
+.quick-alo-ph-circle.active {
+    width: 130px;
+    height: 130px;
+    top: -40px;
+    left: -40px;
+    position: absolute;
+    background-color: transparent;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid rgba(30,30,30,.4);
+    opacity: 1;
+    -webkit-animation: quick-alo-circle-anim 1.2s infinite ease-in-out;
+    -moz-animation: quick-alo-circle-anim 1.2s infinite ease-in-out;
+    -ms-animation: quick-alo-circle-anim 1.2s infinite ease-in-out;
+    -o-animation: quick-alo-circle-anim 1.2s infinite ease-in-out;
+    animation: quick-alo-circle-anim 1.2s infinite ease-in-out;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.quick-alo-ph-circle-fill.active {
+    width: 80px;
+    height: 80px;
+    top: -15px;
+    left: -15px;
+    position: absolute;
+    background-color: #000;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    opacity: 1;
+    -webkit-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    -moz-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    -ms-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    -o-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.call-now-button div a .quick-alo-ph-img-circle, .call-now-button div a .quick-alo-phone-img-circle {
+    background-color: #81d742;
+}
+
+.quick-alo-ph-img-circle.shake {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    opacity: 1;
+    background: url(/img/quick-call.png) no-repeat center center;
+    -webkit-animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+    -moz-animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+    -ms-animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+    -o-animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+    animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.call-now-button div {
+    display: flex;
+}
+
+@keyframes quick-alo-circle-anim {
+    0% {
+        -webkit-transform: rotate(0) scale(.5) skew(1deg);
+        -webkit-opacity: .1;
+    }
+
+    30% {
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+        -webkit-opacity: .5;
+    }
+
+    100% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+        -webkit-opacity: .1;
+    }
+}
+
+@keyframes quick-alo-circle-img-anim {
+    0% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+    }
+
+    10% {
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+
+    20% {
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+    }
+
+    30% {
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+
+    40% {
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+    }
+}
+
+@keyframes quick-alo-circle-fill-anim {
+    0% {
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+        opacity: .2;
+    }
+
+    50% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+        opacity: .2;
+    }
+
+    100% {
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+        opacity: .2;
+    }
 }

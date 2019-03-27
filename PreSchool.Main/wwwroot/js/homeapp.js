@@ -1,44 +1,12 @@
 ﻿$(document).ready(function () {
+    mainInit();
     ajaxInit();
-    modalInit();
 });
 
-function ajaxInit() {
-    $.ajaxSetup({ cache: false });
-    $('.ajax-form').submit(function () {
-        var target = $(this).data('target');
-        if (!target)
-            return false;
-
-        if (!$(this).valid())
-            return false;
-
-        $.ajax({
-            url: $(this).attr('action'),
-            type: $(this).attr('method'),
-            data: $(this).serialize(),
-            success: function (result) { $(target).html(result); },
-            error: function () { $(target).html(''); }
-        });
-
-        return false;
-    });
-    $(document).on('click', '.ajax-link', function (e) {
+function mainInit() {
+    $(document).on('click', '#CaptchaImg', function (e) {
         e.preventDefault();
-        var target = $(this).data('target');
-        if (target) {
-            $(target).load(this.href);
-        }
-    });
-}
-
-function modalInit() {
-    $('form input:checkbox').on('change', function () {
-        if ($(this).is(':checked')) {
-            $(this).attr('value', 'true');
-        } else {
-            $(this).attr('value', 'false');
-        }
+        captchaReload();
     });
     $(document).on('click', '.modal-opener', function (e) {
         e.preventDefault();
@@ -52,29 +20,52 @@ function modalInit() {
         e.preventDefault();
         location.reload();
     });
-    $(document).on('click', '#CaptchaImg', function (e) {
-        e.preventDefault();
-        $('#CaptchaImg').removeAttr('src').attr('src', '/Home/Captcha');
-    });
     $('#modalContainer').on('d-none.bs.modal', function () {
         $('#modalContent').html('');
     });
+}
 
-    modalAjax('.modalForm');
+function ajaxInit() {
+    $.ajaxSetup({ cache: false });
+    $(document).on('submit', '.form-ajax', function (e) {
+        if (!$(this).valid())
+            return false;
+
+        var target = $(this).data('target');
+
+        $('#progress').show();
+        $(this).find(':submit').hide();
+
+        $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            data: $(this).serialize(),
+            success: function (result) {
+                if (target)
+                    $(target).html(result);
+                else
+                    modalRender(result);
+                captchaReload();
+            },
+            error: function () {
+                modalReset();
+                captchaReload();
+            }
+        });
+
+        return false;
+    });
+}
+
+function captchaReload() {
+    $('#Captcha').val('');
+    $('#CaptchaImg').removeAttr('src').attr('src', '/Home/Captcha');
 }
 
 function modalOpen(href) {
     $.get(href, function (result) {
         modalRender(result);
     });
-}
-
-function modalReset(form) {
-    $('#progress').hide();
-    $(form).find(':submit').show();
-    $('#Captcha').val('');
-    $('.input-captcha').removeClass('state-success');
-    $('#CaptchaImg').removeAttr('src').attr('src', '/Home/Captcha');
 }
 
 function modalRender(result) {
@@ -85,60 +76,33 @@ function modalRender(result) {
         } else {
             location.reload();
         }
-        return false;
     }
     else if (result.code === 2) {
-        if (result.message) {
-            swal(result.title, result.message, result.icon);
-        }
-        return true;
+        if (result.message) { swal(result.title, result.message, result.icon); }
+        modalReset();
     }
     else if (result.code === 3) {
         $('#modalContainer').modal('hide');
         swal(result.title, result.message, result.icon).then(function () { location.reload(); });
-        return false;
     }
     else if (result.code === 10) {
         if (result.returnUrl)
             location.href = result.returnUrl;
         else
             location.reload();
-
-        return false;
     }
     else {
         $('#modalContent').html(result);
         $('#modalContainer').modal({ keyboard: true });
-        $('#Captcha').val('');
-        $('form').removeData('validator');
-        $('form').removeData('unobtrusiveValidation');
-        $.validator.unobtrusive.parse('form');
-        modalAjax('.modalForm');
-        return false;
+        modalReset();
     }
 }
 
-function modalAjax(form) {
-    $(form).submit(function () {
-        if (!$(this).valid())
-            return false;
-
-        $(form).find(':submit').hide();
-        $('#progress').show();
-
-        $.ajax({
-            url: $(this).attr('action'),
-            type: $(this).attr('method'),
-            data: $(this).serialize(),
-            success: function (result) {
-                if (modalRender(result))
-                    modalReset(form);
-            },
-            error: function () {
-                modalReset(form);
-            }
-        });
-
-        return false;
-    });
+function modalReset() {
+    $('#progress').hide();
+    $('.form-ajax').find(':submit').show();
+    $('.form-ajax').removeData('validator');
+    $('.form-ajax').removeData('unobtrusiveValidation');
+    $('.input-captcha').removeClass('state-success');
+    $.validator.unobtrusive.parse('form');
 }
